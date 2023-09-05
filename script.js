@@ -39,6 +39,12 @@ document.querySelector(".year-input").oninput = () => {
     document.querySelector(".year-input").value;
 };
 
+document.getElementById("box").oninput = () => {
+  document.getElementById("box").innerText =
+    document.getElementById("box").value;
+  box.value = box.value.replace(/[^0-9]/g, "");
+};
+
 const first = document.getElementById("first");
 const logo = document.getElementById("logo");
 
