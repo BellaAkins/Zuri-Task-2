@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zuri card</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="images">
+          <img src="chip.png" alt="" />
+          <img id="logo" src="visa.png" alt="" />
+        </div>
+        <div class="number-box">
+          <p class="card-number-box" id="one"></p>
+          <p class="card-number-box" id="two"></p>
+          <p class="card-number-box" id="three"></p>
+          <p class="card-number-box" id="four"></p>
+        </div>
+
+        <div class="card-details">
+          <div class="box">
+            <span>card holder</span>
+            <div class="card-holder-name"></div>
+          </div>
+          <div class="box">
+            <span>expires</span>
+            <div class="expiration-month-year">
+              <div class="exp-month"></div>
+              <div class="exp-year"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <form action="">
+          <div class="card-number">
+            <div class="title">
+              <p>card number</p>
+            </div>
+            <div class="number">
+              <!--<input type="number" maxlength="16" class="card-number-input" />-->
+              <input
+                type="number"
+                minlength="4"
+                maxlength="4"
+                class="card-number-first"
+                id="first"
+                required
+              />
+              <input
+                type="number"
+                minlength="4"
+                maxlength="4"
+                class="card-number-second"
+                id="second"
+                required
+              /><input
+                type="number"
+                minlength="4"
+                maxlength="4"
+                class="card-number-third"
+                id="third"
+                required
+              />
+              <input
+                type="number"
+                minlength="4"
+                maxlength="4"
+                class="card-number-fourth"
+                id="fourth"
+                required
+              />
+            </div>
+          </div>
+          <div class="card-holder">
+            <div class="title">
+              <p>card holder</p>
+            </div>
+            <input type="text" class="card-holder-input" required />
+          </div>
+
+          <div class="expiration-date">
+            <div class="title">
+              <p>expiration date</p>
+              <div class="input">
+                <select name="month" id="month" class="month-input" required>
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <select name="year" id="year" class="year-input" required>
+                  <option value=""></option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ccv">
+              <p>CCV</p>
+
+              <input
+                type="number"
+                minlength="3"
+                maxlength="4"
+                class="cvv-input"
+                required
+              />
+            </div>
+          </div>
+
+          <!--<input class="submit-btn" type="submit" value="Submit" />-->
+          <button class="submit-btn">submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
