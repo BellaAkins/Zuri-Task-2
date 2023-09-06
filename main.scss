@@ -1,294 +1,251 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap");
 
 * {
-  //box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "inter";
+  //background-color: yellow;
   text-transform: uppercase;
+
+  img {
+    width: 60px;
+  }
 }
+
 .container {
-  font-family: inter;
-  background-color: yellow;
-  // text-align: center;
-  margin: 0 auto;
-  min-width: 500px;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  height: 80vh;
-  margin-top: 5em;
-  border-radius: 30px;
+  background: lightgreen;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
+
+  p {
+    display: none;
+  }
 
   .card-container {
-    background: #020202;
-    border-radius: 15px;
-    width: 60%;
-    padding: 32px;
-    margin: 0 auto;
-    color: #f2f2f2;
-    position: absolute;
-    //bottom: 2em;
-    top: -50px;
-    left: 6em;
-    font-weight: bold;
+    //background: blue;
+    position: relative;
+    height: 300px;
+    width: 400px;
+    margin-bottom: -100px;
 
-    .number-box {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    img {
-      width: 60px;
-    }
-
-    .images {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .card-details {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 5em;
-
-      .expiration-month-year {
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  }
-
-  .content {
-    margin-bottom: 10em;
-    position: absolute;
-    top: 15em;
-
-    .title {
-      text-transform: uppercase;
-      margin-left: 20px;
-    }
-
-    .card-number {
-      display: flex;
-      flex-direction: column;
-      width: 600px;
-      margin: 0 auto;
-      margin-top: 2em;
-      .number {
-        display: flex;
-
-        input {
-          width: 90px;
-          padding: 8px;
-          border-radius: 3px;
-          border: none;
-          margin: auto;
-        }
-      }
-    }
-
-    .card-holder {
-      input {
-        width: 85%;
-        margin-left: 25px;
-        padding: 12px;
-        border-radius: 3px;
-        border: none;
-      }
-    }
-    .expiration-date {
-      display: flex;
-      justify-content: space-between;
-      //flex-direction: column;
-
-      p {
-        margin-left: 6.8px;
-      }
-
-      select {
-        margin-left: 8.5px;
-        width: 85px;
-        padding: 6px;
-        border-radius: 3px;
-        border: none;
-      }
-
-      .ccv {
-        p {
-          margin-left: 35px;
-        }
-        input {
-          width: 45%;
-          margin-left: 35px;
-          padding: 6px;
-          border-radius: 3px;
-          border: none;
-        }
-      }
-    }
-  }
-
-  input[type="submit"],
-  button {
-    background: #020202;
-    margin: 0 auto;
-    display: block;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 350px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 35px;
-    cursor: pointer;
-
-    &:hover {
-      background: #020202;
-      border: 5px solid #ffffff;
-      color: #ffff00;
-    }
-  }
-}
-
-@media (max-width: 750px) {
-  .container {
-    background-color: #add8e6;
-    .card-container {
-      background: #020202;
-      border-radius: 15px;
-      width: 55%;
-      padding: 32px;
-      margin: 0 auto;
-      color: #f2f2f2;
+    .atm-card {
       position: absolute;
-      //bottom: 2em;
-      top: -50px;
-      left: 6em;
-      font-weight: bold;
-
-      .number-box {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
-      }
-
-      img {
-        width: 60px;
-      }
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(30deg, black, deeppink);
+      border-radius: 15px;
+      padding: 20px;
 
       .images {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        img {
+          height: 50px;
+        }
+      }
+
+      .number-box {
+        padding: 30px 0;
+        font-size: 20px;
+        color: #ffffff;
+        display: flex;
         justify-content: space-between;
       }
 
-      .card-details {
+      .cardbox {
+        display: flex;
+        //gap: 4em;
+
+        .box {
+          margin-top: 57px;
+          color: #ffffff;
+          font-size: 15px;
+          &:nth-child(1) {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    //size of form//
+    width: 600px;
+    padding-top: 160px;
+
+    .inputbox {
+      margin-top: 20px;
+
+      .number {
         display: flex;
         justify-content: space-between;
-        margin-top: 5em;
+        gap: 12px;
+      }
 
-        .expiration-month-year {
+      span {
+        display: block;
+        color: #020202;
+        padding-bottom: 5px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        color: #020202;
+        border-radius: 10px;
+      }
+    }
+
+    .expiration-box {
+      //display: flex;
+      //gap: 15px;
+      margin-top: 20px;
+      .title {
+        display: flex;
+        gap: 20em;
+
+        .select-inputbox {
           display: flex;
-          justify-content: space-between;
+          gap: 15px;
+
+          select {
+            padding: 10px;
+            border-radius: 10px;
+          }
+        }
+
+        .ccv-inputbox {
+          span {
+            display: block;
+          }
+
+          input {
+            width: 100%;
+            padding: 0.5em;
+            border-radius: 5px;
+          }
         }
       }
     }
 
-    .content {
-      margin-bottom: 10em;
-      position: absolute;
-      top: 15em;
-      left: 4em;
-      //padding: 20px;
+    .submit-btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      color: #ffffff;
+      font-size: 20px;
+      cursor: pointer;
+      background: green;
 
-      .title {
-        text-transform: uppercase;
-        margin-left: 10px;
+      &:hover {
+        letter-spacing: 2px;
+        opacity: 0.8;
       }
+    }
+  }
+}
 
-      .card-number {
-        display: flex;
-        width: 400px;
-        margin: 0;
-        margin-top: 2em;
+@media only screen and (max-width: 768px) {
+  .container {
+    background: #add8e6;
 
-        .number {
-          display: flex;
+    .card-container {
+      //background: blue;
+      position: relative;
+      height: 300px;
+      width: 350px;
+      margin-bottom: -100px;
+    }
 
-          input {
-            width: 60px;
-            padding: 8px;
-            border-radius: 3px;
-            border: none;
-            margin: auto;
-          }
-        }
-      }
+    form {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      //size of form//
+      width: 400px;
+      padding-top: 160px;
 
-      .card-holder {
-        input {
-          width: 74%;
-          margin-left: 25px;
-          padding: 12px;
-          border-radius: 3px;
-          border: none;
-        }
-      }
-      .expiration-date {
-        display: flex;
-        justify-content: space-between;
-        gap: 60px;
-        //flex-direction: column;
+      .inputbox {
+        margin-top: 20px;
 
-        .title {
-          font-size: 14px;
+        span {
+          display: block;
+          color: #020202;
+          padding-bottom: 5px;
         }
 
-        p {
-          margin-left: 6px;
+        input,
+        select {
+          width: 100%;
+          padding: 10px;
+          color: #020202;
         }
 
         select {
-          margin-left: 8.5px;
-          width: 35px;
-          padding: 6px;
-          border-radius: 3px;
-          border: none;
-        }
-
-        .ccv {
-          p {
-            margin-left: 35px;
-          }
-          input {
-            width: 25%;
-            margin-right: 45px;
-            padding: 6px;
-            border-radius: 3px;
-            border: none;
-          }
+          display: flex;
+          justify-content: space-between;
+          gap: 15em;
         }
       }
-    }
-    input[type="submit"],
-    button {
-      background: #020202;
-      margin: 0 auto;
-      display: block;
-      color: #ffffff;
-      text-transform: uppercase;
-      width: 250px;
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 35px;
-      margin-right: 10em;
-      cursor: pointer;
 
-      &:hover {
-        background: #020202;
-        border: 5px solid #ffffff;
-        color: #add8e6;
+      .expiration-box {
+        //display: flex;
+        //gap: 15px;
+        .title {
+          display: flex;
+          gap: 9em;
+
+          .select-inputbox {
+            display: flex;
+            gap: 15px;
+          }
+
+          .cvv-inputbox {
+            span {
+              display: block;
+            }
+
+            input {
+              width: 60%;
+            }
+          }
+        }
+
+        .inputbox {
+          display: flex;
+          //flex: 1 1 0.3;
+        }
+      }
+
+      .submit-btn {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        background: blue;
+
+        &:hover {
+          letter-spacing: 3px;
+          opacity: 0.5;
+        }
       }
     }
   }
