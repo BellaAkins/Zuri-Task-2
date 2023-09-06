@@ -1,250 +1,201 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap");
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "inter";
   text-transform: uppercase;
+}
+* img {
+  width: 60px;
 }
 
 .container {
-  font-family: inter;
-  background-color: yellow;
-  margin: 0 auto;
-  min-width: 500px;
-  max-width: 600px;
-  margin: 0 auto;
-  position: relative;
-  height: 80vh;
-  margin-top: 5em;
-  border-radius: 30px;
+  background: lightgreen;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
+}
+.container p {
+  display: none;
 }
 .container .card-container {
-  background: #020202;
+  position: relative;
+  height: 300px;
+  width: 400px;
+  margin-bottom: -100px;
+}
+.container .card-container .atm-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(30deg, black, deeppink);
   border-radius: 15px;
-  width: 60%;
-  padding: 32px;
-  margin: 0 auto;
-  color: #f2f2f2;
-  position: absolute;
-  top: -50px;
-  left: 6em;
-  font-weight: bold;
+  padding: 20px;
 }
-.container .card-container .number-box {
-  margin-top: 20px;
+.container .card-container .atm-card .images {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding-top: 10px;
 }
-.container .card-container img {
-  width: 60px;
+.container .card-container .atm-card .images img {
+  height: 50px;
 }
-.container .card-container .images {
-  display: flex;
-  justify-content: space-between;
-}
-.container .card-container .card-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5em;
-}
-.container .card-container .card-details .expiration-month-year {
-  display: flex;
-  justify-content: space-between;
-}
-.container .content {
-  margin-bottom: 10em;
-  position: absolute;
-  top: 15em;
-}
-.container .content .title {
-  text-transform: uppercase;
-  margin-left: 20px;
-}
-.container .content .card-number {
-  display: flex;
-  flex-direction: column;
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 2em;
-}
-.container .content .card-number .number {
-  display: flex;
-}
-.container .content .card-number .number input {
-  width: 90px;
-  padding: 8px;
-  border-radius: 3px;
-  border: none;
-  margin: auto;
-}
-.container .content .card-holder input {
-  width: 85%;
-  margin-left: 25px;
-  padding: 12px;
-  border-radius: 3px;
-  border: none;
-}
-.container .content .expiration-date {
-  display: flex;
-  justify-content: space-between;
-}
-.container .content .expiration-date p {
-  margin-left: 6.8px;
-}
-.container .content .expiration-date select {
-  margin-left: 8.5px;
-  width: 85px;
-  padding: 6px;
-  border-radius: 3px;
-  border: none;
-}
-.container .content .expiration-date .ccv p {
-  margin-left: 35px;
-}
-.container .content .expiration-date .ccv input {
-  width: 45%;
-  margin-left: 35px;
-  padding: 6px;
-  border-radius: 3px;
-  border: none;
-}
-.container input[type=submit],
-.container button {
-  background: #020202;
-  margin: 0 auto;
-  display: block;
+.container .card-container .atm-card .number-box {
+  padding: 30px 0;
+  font-size: 20px;
   color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  width: 350px;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  margin-top: 35px;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
-.container input[type=submit]:hover,
-.container button:hover {
-  background: #020202;
-  border: 5px solid #ffffff;
-  color: #ffff00;
+.container .card-container .atm-card .cardbox {
+  display: flex;
+}
+.container .card-container .atm-card .cardbox .box {
+  margin-top: 57px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.container .card-container .atm-card .cardbox .box:nth-child(1) {
+  margin-right: auto;
+}
+.container form {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  padding-top: 160px;
+}
+.container form .inputbox {
+  margin-top: 20px;
+}
+.container form .inputbox .number {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container form .inputbox span {
+  display: block;
+  color: #020202;
+  padding-bottom: 5px;
+}
+.container form .inputbox input,
+.container form .inputbox select {
+  width: 100%;
+  padding: 10px;
+  color: #020202;
+  border-radius: 10px;
+}
+.container form .expiration-box {
+  margin-top: 20px;
+}
+.container form .expiration-box .title {
+  display: flex;
+  gap: 20em;
+}
+.container form .expiration-box .title .select-inputbox {
+  display: flex;
+  gap: 15px;
+}
+.container form .expiration-box .title .select-inputbox select {
+  padding: 10px;
+  border-radius: 10px;
+}
+.container form .expiration-box .title .ccv-inputbox span {
+  display: block;
+}
+.container form .expiration-box .title .ccv-inputbox input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.container form .submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  background: green;
+}
+.container form .submit-btn:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
 }
 
-@media (max-width: 750px) {
+@media only screen and (max-width: 768px) {
   .container {
-    background-color: #add8e6;
+    background: #add8e6;
   }
   .container .card-container {
-    background: #020202;
-    border-radius: 15px;
-    width: 55%;
-    padding: 32px;
-    margin: 0 auto;
-    color: #f2f2f2;
-    position: absolute;
-    top: -50px;
-    left: 6em;
-    font-weight: bold;
+    position: relative;
+    height: 300px;
+    width: 350px;
+    margin-bottom: -100px;
   }
-  .container .card-container .number-box {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-  }
-  .container .card-container img {
-    width: 60px;
-  }
-  .container .card-container .images {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container .card-container .card-details {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5em;
-  }
-  .container .card-container .card-details .expiration-month-year {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container .content {
-    margin-bottom: 10em;
-    position: absolute;
-    top: 15em;
-    left: 4em;
-  }
-  .container .content .title {
-    text-transform: uppercase;
-    margin-left: 10px;
-  }
-  .container .content .card-number {
-    display: flex;
-    width: 400px;
-    margin: 0;
-    margin-top: 2em;
-  }
-  .container .content .card-number .number {
-    display: flex;
-  }
-  .container .content .card-number .number input {
-    width: 60px;
-    padding: 8px;
-    border-radius: 3px;
-    border: none;
-    margin: auto;
-  }
-  .container .content .card-holder input {
-    width: 74%;
-    margin-left: 25px;
-    padding: 12px;
-    border-radius: 3px;
-    border: none;
-  }
-  .container .content .expiration-date {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-  }
-  .container .content .expiration-date .title {
-    font-size: 14px;
-  }
-  .container .content .expiration-date p {
-    margin-left: 6px;
-  }
-  .container .content .expiration-date select {
-    margin-left: 8.5px;
-    width: 35px;
-    padding: 6px;
-    border-radius: 3px;
-    border: none;
-  }
-  .container .content .expiration-date .ccv p {
-    margin-left: 35px;
-  }
-  .container .content .expiration-date .ccv input {
-    width: 25%;
-    margin-right: 45px;
-    padding: 6px;
-    border-radius: 3px;
-    border: none;
-  }
-  .container input[type=submit],
-  .container button {
-    background: #020202;
-    margin: 0 auto;
-    display: block;
-    color: #ffffff;
-    text-transform: uppercase;
-    width: 250px;
-    padding: 15px;
-    border: none;
+  .container form {
+    background: #ffffff;
     border-radius: 10px;
-    margin-top: 35px;
-    margin-right: 10em;
-    cursor: pointer;
+    padding: 20px;
+    width: 400px;
+    padding-top: 160px;
   }
-  .container input[type=submit]:hover,
-  .container button:hover {
-    background: #020202;
-    border: 5px solid #ffffff;
-    color: #add8e6;
+  .container form .inputbox {
+    margin-top: 20px;
+  }
+  .container form .inputbox span {
+    display: block;
+    color: #020202;
+    padding-bottom: 5px;
+  }
+  .container form .inputbox input,
+  .container form .inputbox select {
+    width: 100%;
+    padding: 10px;
+    color: #020202;
+  }
+  .container form .inputbox select {
+    display: flex;
+    justify-content: space-between;
+    gap: 15em;
+  }
+  .container form .expiration-box .title {
+    display: flex;
+    gap: 9em;
+  }
+  .container form .expiration-box .title .select-inputbox {
+    display: flex;
+    gap: 15px;
+  }
+  .container form .expiration-box .title .cvv-inputbox span {
+    display: block;
+  }
+  .container form .expiration-box .title .cvv-inputbox input {
+    width: 60%;
+  }
+  .container form .expiration-box .inputbox {
+    display: flex;
+  }
+  .container form .submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: blue;
+  }
+  .container form .submit-btn:hover {
+    letter-spacing: 3px;
+    opacity: 0.5;
   }
 }/*# sourceMappingURL=main.css.map */
