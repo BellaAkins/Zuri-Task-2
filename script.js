@@ -1,3 +1,4 @@
+//For Card Number//
 document.getElementById("first").oninput = () => {
   document.getElementById("one").innerText =
     document.getElementById("first").value;
@@ -22,13 +23,20 @@ document.getElementById("fourth").oninput = () => {
   fourth.value = fourth.value.replace(/[^0-9]/g, "");
 };
 
-const holder = document.querySelector(".card-holder-input");
-const holderName = document.querySelector(".card-holder-name");
-
-holder.oninput = () => {
-  holderName.innerText = holder.value;
+//For CCV box//
+document.getElementById("ccvBox").oninput = () => {
+  document.getElementById("ccvBox").innerText =
+    document.getElementById("ccvBox").value;
+  ccvBox.value = ccvBox.value.replace(/[^0-9]/g, "");
 };
 
+//For Card Holder//
+document.querySelector(".card-holder-input").oninput = () => {
+  document.querySelector(".card-holder-name").innerText =
+    document.querySelector(".card-holder-input").value;
+};
+
+//For Expiration date//
 document.querySelector(".month-input").oninput = () => {
   document.querySelector(".exp-month").innerText =
     document.querySelector(".month-input").value;
@@ -39,19 +47,12 @@ document.querySelector(".year-input").oninput = () => {
     document.querySelector(".year-input").value;
 };
 
-document.getElementById("box").oninput = () => {
-  document.getElementById("box").innerText =
-    document.getElementById("box").value;
-  box.value = box.value.replace(/[^0-9]/g, "");
-};
-
+//To change Logo//
 const first = document.getElementById("first");
 const logo = document.getElementById("logo");
 
 first.addEventListener("input", function () {
   const inputValue = first.value;
-  //Changing Card Logo based on input
-
   changeCardLogo(inputValue);
 });
 
@@ -65,9 +66,12 @@ function changeCardLogo(inputValue) {
   }
 }
 
-const btn = document.querySelector(".submit-btn");
-btn.addEventListener("submit", alertPayment);
+//Submission//
+var form = document.getElementById("form");
+var message = document.getElementById("message");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-function alertPayment() {
+  //message.textContent = "Your payment was successful";
   alert("Your payment was successful");
-}
+});
